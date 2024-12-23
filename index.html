@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mừng Noel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffafbd, #ffc3a0);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #fff;
+            font-size: 1rem;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        header {
+            background: #ff6b81;
+            padding: 20px 0;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .content {
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 20px;
+            background: rgb(166 147 147 / 49%);
+            border-radius: 10px;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .gift-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #ff6b81;
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gift-button:hover {
+            background: #ff6b81;
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            background: #ff6b81;
+            border-radius: 10px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Merry Christmas</h1>
+        </header>
+
+        <div class="content">
+            <h2>Gửi đến người đẹp của em:</h2>
+            <p>Chúc Chị có một đêm Noel thật ấm áp, hạnh phúc và bình an bên gia đình Chị nhé. Chúc Chị đạt nhiều thành tích tốt hơn trong học tập nè và đổ nguyện vọng 1 nheeee!!! Em cảm thấy thật may mắn khi gặp được người vừa xinh đẹp vừa giỏi giang như Chị hihi :> 🎄❤️</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 - Gửi ngàn yêu thương đến Chị!</p>
+        </footer>
+    </div>
+
+    <script>
+        // Create snowflakes
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnowflake, 200);
+    </script>
+</body>
+</html>
